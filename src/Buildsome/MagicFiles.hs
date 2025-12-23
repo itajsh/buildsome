@@ -11,7 +11,7 @@ import Lib.FilePath (FilePath)
 import qualified Data.ByteString.Char8 as BS8
 
 specialFile :: FilePath -> Bool
-specialFile path = any (`BS8.isPrefixOf` path) ["/dev", "/proc", "/sys", "/var/folders"]
+specialFile path = any (`BS8.isPrefixOf` path) ["/dev", "/proc", "/sys", "/var/folders", "/tmp/buildsome_special"]
 
 inputIgnored :: FilePath -> Bool
 inputIgnored = specialFile
